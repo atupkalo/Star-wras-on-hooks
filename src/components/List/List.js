@@ -4,10 +4,6 @@ import Preloader from "../Preloader/Preloader";
 
 import "./List.css";
 
-const people = {
-  name: "",
-};
-
 function List(props) {
   const [allPeople, setAllPeople] = useState([]);
   const [preloader, setPreloader] = useState(true);
@@ -24,7 +20,7 @@ function List(props) {
       });
   }
 
-  function clickHandler(e) {
+  function doClickHandler(e) {
     const id = Number(e.target.id);
     const listItemData = allPeople.filter((elem, i) => {
       return i === id;
@@ -34,7 +30,7 @@ function List(props) {
 
   useEffect(() => {
     getData();
-  }, []);
+  });
 
   return (
     <div className="list">
@@ -49,7 +45,7 @@ function List(props) {
             itemName={elem.name}
             id={i}
             key={i}
-            clickHandle={clickHandler}
+            clickHandler={doClickHandler}
           />
         );
       })}
