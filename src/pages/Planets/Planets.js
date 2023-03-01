@@ -6,7 +6,10 @@ function Planets() {
   return (
     <main className="people">
       <h3 className="main-title">Planets</h3>
-      <div className="container"></div>
+      <div className="container">
+        <List section={"planets"} />
+        <Card classIcon={"planet-icon"} />
+      </div>
     </main>
   );
 }

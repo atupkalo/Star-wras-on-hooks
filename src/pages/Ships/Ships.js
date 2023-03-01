@@ -6,7 +6,10 @@ function Ships() {
   return (
     <main className="people">
       <h3 className="main-title">Ships</h3>
-      <div className="container"></div>
+      <div className="container">
+        <List section={"starships"} />
+        <Card classIcon={"ship-icon"} />
+      </div>
     </main>
   );
 }

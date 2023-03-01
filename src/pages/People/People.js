@@ -7,7 +7,8 @@ function People() {
     <main className="people">
       <h3 className="main-title">People</h3>
       <div className="container">
-        <List />
+        <List section={"people"} />
+        <Card classIcon={"person-icon"} />
       </div>
     </main>
   );
