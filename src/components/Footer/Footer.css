@@ -1,0 +1,12 @@
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: #121928;
+  text-align: center;
+}
+.footer-title {
+  font-family: "Roboto";
+  color: #fff;
+  padding: 30px 0;
+}

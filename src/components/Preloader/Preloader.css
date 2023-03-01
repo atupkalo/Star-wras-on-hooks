@@ -1,0 +1,37 @@
+.preloader-wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(31, 21, 54, 0.8);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.preloader {
+  position: relative;
+}
+.spiner {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-top: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  border-radius: 50%;
+  animation-name: spin;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

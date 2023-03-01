@@ -1,0 +1,53 @@
+.list-item {
+  transition: 0.4s;
+  padding: 12px;
+  border-radius: 20px;
+  width: 100%;
+  min-height: 30px;
+  background-image: linear-gradient(
+    to right,
+    rgb(87, 65, 144),
+    rgb(88, 23, 73)
+  );
+  margin-bottom: 20px;
+}
+.hero-name {
+  font-size: 1.8rem;
+  color: #ffffff;
+  font-family: "Roboto";
+  max-width: 290px;
+}
+.hero-img-wrap {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid #8d7d88;
+  background-image: url("../../img/star.png");
+  background-size: cover;
+  margin-right: 12px;
+}
+.hero-wrap {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.error {
+  font-size: 1.4rem;
+  color: #ffffff;
+  font-family: "Roboto";
+}
+.view-btn {
+  position: absolute;
+  right: 20px;
+  transition: 0.3s;
+  padding: 8px 26px;
+  background: #87d7d7;
+  border: none;
+  border-radius: 5px;
+}
+.view-btn:hover {
+  background: #d787be;
+}

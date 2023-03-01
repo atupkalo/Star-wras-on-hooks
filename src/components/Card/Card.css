@@ -1,0 +1,66 @@
+.card {
+  width: 50%;
+  border-radius: 20px;
+  padding: 20px;
+}
+.card-left {
+  width: 100%;
+}
+.card-left-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.card-left-name {
+  font-size: 2.2rem;
+  font-family: "Roboto";
+  font-weight: 500;
+  color: #f7dc65;
+}
+.card-left-pic-wrap {
+  width: 50%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+.planet-icon {
+  background-image: url("../../img/planet.png");
+}
+.ship-icon {
+  background-image: url("../../img/ship.png");
+}
+.person-icon {
+  background-image: url("../../img/hero.png");
+}
+.desc-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.dec-item {
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 5px;
+  border: 1px solid #949292;
+  font-family: "Roboto";
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+.decs-item-span {
+  padding-right: 12px;
+  font-size: 0.9rem;
+  color: #949292;
+  font-family: "Roboto";
+}
+.default-card {
+  padding: 60px 140px;
+  margin: 0 auto;
+  font-size: 1.3rem;
+  font-family: "Roboto";
+  color: #fff;
+  border: 1px solid #6d466a;
+  border-radius: 20px;
+}
