@@ -1,9 +1,13 @@
 .main-title {
   font-size: 3.3rem;
-  color: rgb(149, 238, 208);
   font-family: "Roboto";
   font-weight: 500;
-  padding: 60px 0 40px 0;
+}
+.main-title-light {
+  color: rgb(74, 90, 88);
+}
+.main-title-dark {
+  color: rgb(149, 238, 208);
 }
 main {
   text-align: center;

@@ -4,18 +4,30 @@
   border-radius: 20px;
   width: 100%;
   min-height: 30px;
+  margin-bottom: 20px;
+}
+.list-item-dark {
   background-image: linear-gradient(
     to right,
     rgb(87, 65, 144),
     rgb(88, 23, 73)
   );
-  margin-bottom: 20px;
 }
-.hero-name {
+.list-item-light {
+  background-image: linear-gradient(
+    to right,
+    rgb(196, 183, 230),
+    rgb(207, 176, 200)
+  );
+}
+.hero-name-dark {
   font-size: 1.8rem;
   color: #ffffff;
   font-family: "Roboto";
   max-width: 290px;
+}
+.list-item-light {
+  color: rgb(56, 56, 56);
 }
 .hero-img-wrap {
   width: 70px;
@@ -44,10 +56,27 @@
   right: 20px;
   transition: 0.3s;
   padding: 8px 26px;
-  background: #87d7d7;
   border: none;
   border-radius: 5px;
 }
+.view-btn-dark {
+  background: #87d7d7;
+}
+.view-btn-light {
+  color: #ffffff;
+  background: #3b5d5d;
+}
 .view-btn:hover {
-  background: #d787be;
+  background: #da61b3;
+}
+.theme-name {
+  padding: 0 5px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.theme-name-light {
+  color: #dcdcdc;
+}
+.theme-name-dark {
+  color: #a842b1;
 }

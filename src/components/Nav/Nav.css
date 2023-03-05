@@ -1,6 +1,5 @@
 .nav-list {
-  padding: 20px;
-  width: 100%;
+  padding: 12px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -11,6 +10,7 @@
   color: #ffffff;
   text-decoration: none;
   font-family: "Fira Sans";
+  text-transform: uppercase;
 }
 .nav-item a:hover {
   opacity: 0.8;

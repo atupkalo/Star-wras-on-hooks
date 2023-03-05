@@ -1,0 +1,36 @@
+.switch-wrap {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 400px;
+}
+.switch-theme,
+.swith-language {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+.language {
+  color: #ffffff;
+  font-size: 1.2rem;
+  border: 1px solid #fff;
+  padding: 4px 16px;
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.theme:hover,
+.language:hover {
+  background: #f8dc64;
+  color: black;
+  border: 1px solid #f8dc64;
+}
+.language-acitve {
+  background-color: rgb(119, 131, 127);
+  color: #ffffff;
+  padding: 4px 16px;
+  border-radius: 10px;
+  border: 1px solid #fff;
+}

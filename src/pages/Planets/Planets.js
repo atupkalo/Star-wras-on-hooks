@@ -1,36 +1,36 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import List from "../../components/List/List";
 import Card from "../../components/Card/Card";
+import MainContext from "../../store/MainContext";
 
-function Planets() {
-  const [listItem, setListItem] = useState([]);
+function Planets(props) {
+  const [cardValues, setCardValues] = useState([]);
+  const [cardName, setCardName] = useState("");
+  const ctx = useContext(MainContext);
+  const cardKyes = Object.values(ctx.language.cardPlanets);
 
   function passingDataHandler(listItemData) {
-    setListItem(listItemData);
+    setCardValues([
+      listItemData[0].population,
+      listItemData[0].diameter,
+      listItemData[0].climate,
+      listItemData[0].terrain,
+    ]);
+    setCardName(listItemData[0].name);
   }
-  console.log(listItem);
   return (
     <main className="people">
-      <h3 className="main-title">Planets</h3>
+      <h3 className={`main-title main-title-${ctx.theme}`}>
+        {props.mainTitle}
+      </h3>
       <div className="container">
         <List section={"planets"} passingData={passingDataHandler} />
-        {listItem.map((elem, i) => {
-          return (
-            <Card
-              classIcon={"person-icon"}
-              key={i}
-              name={elem.name}
-              descItem_1={"Population"}
-              height={elem.population}
-              descItem_2={"Diameter"}
-              gender={elem.diameter}
-              descItem_3={"Climate"}
-              hair_color={elem.climate}
-              descItem_4={"Terrain type"}
-              eye_color={elem.terrain}
-            />
-          );
-        })}
+        <Card
+          classIcon={"person-icon"}
+          name={cardName}
+          keys={cardKyes}
+          values={cardValues}
+        />
       </div>
     </main>
   );

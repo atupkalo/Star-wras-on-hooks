@@ -1,35 +1,36 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import List from "../../components/List/List";
 import Card from "../../components/Card/Card";
+import MainContext from "../../store/MainContext";
 
-function Ships() {
-  const [listItem, setListItem] = useState([]);
+function Ships(props) {
+  const [cardValues, setCardValues] = useState([]);
+  const [cardName, setCardName] = useState("");
+  const ctx = useContext(MainContext);
+  const cardKyes = Object.values(ctx.language.cardShips);
 
   function passingDataHandler(listItemData) {
-    setListItem(listItemData);
+    setCardValues([
+      listItemData[0].passengers,
+      listItemData[0].cargo_capacity,
+      listItemData[0].model,
+      listItemData[0].starship_class,
+    ]);
+    setCardName(listItemData[0].name);
   }
   return (
     <main className="people">
-      <h3 className="main-title">Ships</h3>
+      <h3 className={`main-title main-title-${ctx.theme}`}>
+        {props.mainTitle}
+      </h3>
       <div className="container">
         <List section={"starships"} passingData={passingDataHandler} />
-        {listItem.map((elem, i) => {
-          return (
-            <Card
-              classIcon={"person-icon"}
-              key={i}
-              name={elem.name}
-              descItem_1={"Passengers capacity"}
-              height={elem.passengers}
-              descItem_2={"Cargo capacity'"}
-              gender={elem.cargo_capacity}
-              descItem_3={"Starship class"}
-              hair_color={elem.starship_class}
-              descItem_4={"Model"}
-              eye_color={elem.model}
-            />
-          );
-        })}
+        <Card
+          classIcon={"person-icon"}
+          name={cardName}
+          keys={cardKyes}
+          values={cardValues}
+        />
       </div>
     </main>
   );
