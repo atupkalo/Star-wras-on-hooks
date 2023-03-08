@@ -7,18 +7,20 @@
   margin-bottom: 20px;
 }
 .list-item-dark {
+  transition: 0.3s;
   background-image: linear-gradient(
     to right,
-    rgb(87, 65, 144),
-    rgb(88, 23, 73)
+    rgb(92, 16, 104),
+    rgb(27, 94, 108)
   );
 }
-.list-item-light {
+.list-item-dark:hover {
   background-image: linear-gradient(
     to right,
-    rgb(196, 183, 230),
-    rgb(207, 176, 200)
+    rgb(128, 22, 146),
+    rgb(36, 125, 144)
   );
+  border: 1px solid #2ef3f3;
 }
 .hero-name-dark {
   font-size: 1.8rem;
@@ -34,9 +36,10 @@
   height: 70px;
   border-radius: 50%;
   border: 1px solid #8d7d88;
-  background-image: url("../../img/star.png");
+  background-image: url("../../img/star.svg");
   background-size: cover;
   margin-right: 12px;
+  overflow: hidden;
 }
 .hero-wrap {
   position: relative;
@@ -52,6 +55,7 @@
   font-family: "Roboto";
 }
 .view-btn {
+  cursor: pointer;
   position: absolute;
   right: 20px;
   transition: 0.3s;
@@ -60,14 +64,14 @@
   border-radius: 5px;
 }
 .view-btn-dark {
-  background: #87d7d7;
+  background: #2ef3f3;
 }
 .view-btn-light {
   color: #ffffff;
-  background: #3b5d5d;
+  background: #f8dc64;
 }
 .view-btn:hover {
-  background: #da61b3;
+  background: #f8dc64;
 }
 .theme-name {
   padding: 0 5px;

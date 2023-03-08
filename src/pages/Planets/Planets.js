@@ -26,7 +26,7 @@ function Planets(props) {
       <div className="container">
         <List section={"planets"} passingData={passingDataHandler} />
         <Card
-          classIcon={"person-icon"}
+          classIcon={"planet-icon"}
           name={cardName}
           keys={cardKyes}
           values={cardValues}

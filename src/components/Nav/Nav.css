@@ -12,6 +12,16 @@
   font-family: "Fira Sans";
   text-transform: uppercase;
 }
+.nav-item {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Fira Sans";
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.nav-item:hover {
+  color: #3de1f3;
+}
 .nav-item a:hover {
   opacity: 0.8;
 }

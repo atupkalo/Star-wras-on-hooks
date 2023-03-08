@@ -1,19 +1,33 @@
 .main-title {
-  font-size: 3.3rem;
+  font-size: 4rem;
   font-family: "Roboto";
-  font-weight: 500;
+  font-weight: 400;
 }
 .main-title-light {
-  color: rgb(74, 90, 88);
+  color: rgb(63, 63, 63);
 }
 .main-title-dark {
-  color: rgb(149, 238, 208);
+  color: #ffffff;
 }
 main {
   text-align: center;
 }
 ul {
   list-style: none;
+}
+::placeholder {
+  font-size: 1rem;
+  color: rgb(201, 201, 201);
+}
+
+:-ms-input-placeholder {
+  font-size: 1rem;
+  color: rgb(201, 201, 201);
+}
+
+::-ms-input-placeholder {
+  font-size: 1rem;
+  color: rgb(201, 201, 201);
 }
 .container {
   width: 1240px;
@@ -23,5 +37,5 @@ ul {
   justify-content: space-between;
   align-items: flex-start;
   gap: 10px;
-  padding-bottom: 120px;
+  padding-bottom: 180px;
 }

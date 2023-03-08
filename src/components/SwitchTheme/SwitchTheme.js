@@ -1,5 +1,5 @@
 import Switch from "react-switch";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 
 import MainContext from "../../store/MainContext";
 import "./SwitchTheme.css";
@@ -23,11 +23,14 @@ function SwitchTheme(props) {
         </div>
         <Switch
           onChange={props.themeChange}
-          offColor={"#dcdcdc"}
+          offColor={"#ffffff"}
+          offHandleColor={"#F8DC64"}
+          onHandleColor={"#7FFFD3"}
           onColor={"#782f7e"}
           checked={props.theme === "dark"}
           checkedIcon={false}
           uncheckedIcon={false}
+          handleDiameter={32}
         />
       </div>
       <div className="swith-language">

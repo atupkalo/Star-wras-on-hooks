@@ -1,0 +1,40 @@
+.error-wrap {
+  width: 100%;
+  min-height: 80vh;
+  position: relative;
+}
+.error-inner-wrap {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.error-404 {
+  font-size: 12rem;
+  text-align: center;
+  font-weight: bold;
+}
+.error-desc {
+  padding: 10px 0 20px 0;
+  font-size: 2rem;
+  color: #ffffff;
+}
+.error-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.error-btn {
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 12px 28px;
+  background: #54faf2;
+  border: none;
+}
+.error-btn:hover {
+  background: #fbde20;
+}
+.error-link {
+  text-decoration: none;
+  color: black;
+}

@@ -26,7 +26,7 @@ function Ships(props) {
       <div className="container">
         <List section={"starships"} passingData={passingDataHandler} />
         <Card
-          classIcon={"person-icon"}
+          classIcon={"ship-icon"}
           name={cardName}
           keys={cardKyes}
           values={cardValues}

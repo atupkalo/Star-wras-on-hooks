@@ -1,11 +1,14 @@
 import { Routes, Route } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import People from "./pages/People/People";
+import Home from "./pages/Home/Home";
 import Planets from "./pages/Planets/Planets";
-import Shipes from "./pages/Ships/Ships";
+import ErrorPage from "./pages/ErrorPage/ErrorPage";
+import Starships from "./pages/Starships/Starships";
+import Login from "./pages/Login/Login";
 import MainContext from "./store/MainContext";
 
 import "./App.css";
@@ -16,11 +19,9 @@ function App() {
 
   const lang = ctx.language;
   if (ctx.theme === "light") {
-    body.style.background =
-      "linear-gradient(to right, #dde8ea, rgb(233, 223, 230))";
+    body.style.background = "#f9f9f9";
   } else {
-    body.style.background =
-      "linear-gradient(to right, #2a2644, rgb(59, 18, 47))";
+    body.style.background = "#291E2F";
   }
 
   return (
@@ -30,16 +31,26 @@ function App() {
         <Route
           path="/"
           exect
-          element={<People mainTitle={lang.nav.people} />}
+          element={<Home mainTitle={lang.logedIn.home} />}
+        ></Route>
+        <Route
+          path="People"
+          exect
+          element={<People mainTitle={lang.logedIn.people} />}
         ></Route>
         <Route
           path="Planets"
-          element={<Planets mainTitle={lang.nav.planets} />}
+          element={<Planets mainTitle={lang.logedIn.planets} />}
         ></Route>
         <Route
-          path="Ships"
-          element={<Shipes mainTitle={lang.nav.starships} />}
+          path="Starships"
+          element={<Starships mainTitle={lang.logedIn.starships} />}
         ></Route>
+        <Route
+          path="Login"
+          element={<Login mainTitle={lang.logedIn.login} />}
+        ></Route>
+        <Route path="*" element={<ErrorPage />}></Route>
       </Routes>
       <Footer />
     </div>

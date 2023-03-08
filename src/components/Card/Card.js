@@ -16,18 +16,18 @@ function Card(props) {
           <div className={`card-left card-left-${ctx.theme}`}>{props.name}</div>
         </div>
       </div>
-      <div className="card-right">
-        <ul className="desc-list">
-          {values.map((elem, i) => {
-            return (
-              <li key={i} className={`desc-item desc-item-${ctx.theme}`}>
-                <span className="decs-item-span">{keys[i]}</span>
+      <ul className="desc-list">
+        {values.map((elem, i) => {
+          return (
+            <li key={i} className={"desc-item"}>
+              <div className="decs-item-span">{keys[i]}</div>
+              <div className={`desc-item-data desc-item-data-${ctx.theme}`}>
                 {values[i]}
-              </li>
-            );
-          })}
-        </ul>
-      </div>
+              </div>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 }

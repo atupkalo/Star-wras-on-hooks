@@ -19,11 +19,15 @@ function Header() {
   }
 
   return (
-    <header className={"header"}>
+    <header className={`header header-${ctx.theme}`}>
       <div className="header-container">
-        <h1 className={"header-title"}>{lang.headerTitle.headertitle}</h1>
-        <Nav navItems={Object.values(lang.nav)} />
-        <SwitchTheme theme={ctx.theme} themeChange={themeChangeHandler} />
+        <div className="top-menu">
+          <Nav />
+          <SwitchTheme theme={ctx.theme} themeChange={themeChangeHandler} />
+        </div>
+        <div className="title-wrap">
+          <h1 className={"header-title"}>{lang.headerTitle.headertitle}</h1>
+        </div>
       </div>
     </header>
   );
